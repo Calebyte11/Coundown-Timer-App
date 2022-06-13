@@ -1,0 +1,229 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.body_anchor{   
+    background-image: linear-gradient(315deg,#9ea99edb 0%,#d3d8df66 74%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* backdrop-filter: blur(2px); */
+    width: 100%;
+    height: 100vh;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.header_text {
+    text-align: center;
+    display: flex;
+    background-image: linear-gradient(to right ,hsl(219deg 19% 74% / 58%),hsl(197deg 26% 66% / 96%));
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 19vh;
+    align-content: center;
+    border-radius: 15px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    /* padding: 0px 90px; */
+    width: 70vw;
+    max-width: 100%;
+    font-family: cursive;
+    font-size: 40px;
+    font-weight: bolder;
+}
+header span{
+    color: rgb(104, 98, 98);
+}
+.timer_container{    
+    display: flex;
+    gap: 90px;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    background-image: linear-gradient(to right ,hsl(219deg 19% 74% / 58%),hsl(197deg 26% 66% / 96%));
+    color: rgb(104, 98, 98);
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 56vw;
+    max-width: 100%;
+    min-height: 60vh;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    border-radius: 15px;
+    text-align: center;
+}
+.stoppage_date{
+    display: flex;
+    margin-top: 10px;
+    height: 45px;
+    min-width: 80%;
+    border-bottom: solid rgb(104, 98, 98) 2px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 30px;
+    font-weight: 700;
+    font-size: 16px;
+    font-family: cursive;
+}
+.date.hidden{
+    opacity: 0;
+    display: none;
+    pointer-events: none;
+}
+.reset_class.hidden{
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+}
+.reset_area{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    position: absolute;
+    top: 240px;
+}
+.reset_area.hidden{
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+}
+.reset_search{
+    min-width: 380px;
+    border-radius: 15px;
+    border: 0.1rem solid gray;
+    overflow: hidden;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    height: 12px;
+    padding: 8px;
+    outline: none;
+    background-color: white;
+}
+#reset_button{
+    background-image: linear-gradient(to right,rgb(88 255 109 / 99%),rgb(5 169 46));
+    border: none; 
+    font-size: 20px; 
+    width: 40px;
+    color: black;
+    border-radius: 20px;
+    margin-left: 10px; 
+    aspect-ratio: 2;
+}
+.countdown_counters{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 55px;
+}
+.timer_text{
+    display: flex;
+    margin-bottom: 10px;
+    font-size: 70px;
+    font-family: fantasy;
+    font-weight: bolder;
+}
+.timer_words{
+    display: flex;
+    font-family: cursive;
+    font-weight: 500;
+    justify-content: center;
+}
+
+/* =========== @ MEDIA QUERRY =============== */
+
+/* ============= FOR SMALLER DEVICES (breakpoint = 425px)============ */
+@media screen and (max-width : 425px) {
+    .body_anchor{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .header_text{
+        text-align: justify;
+        font-size: 20px ;
+        height: 60px;
+        min-width: 100%;
+        margin-top: 0px;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        right: 0%;
+        border-radius: 0%;
+    }
+    .timer_container{
+        margin-top: auto;
+        margin-bottom: auto;
+        min-width: 92%;
+        min-height: 33%;
+        gap: 40px;
+    }
+    .stoppage_date{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        height: 40px;
+        width: 85%;
+        font-size: 14px;
+        font-weight: bolder;
+    }
+    .stoppage_date.row{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 80px;
+    }
+    .countdown_counters{
+        gap: 30px;
+    }
+    .timer_text{
+        font-size: 37px;
+    }
+    .reset_area{
+        position: absolute;
+        margin-top: -5px;
+        top: 0px;
+    }
+    .reset_search{
+        min-width: 280px;
+        height: 18px;
+    }
+    #set_timer{
+        margin-right: 1px;
+    }
+    #stoppage_date{
+        margin-left: -11px;
+        display: inline-block;
+        white-space: break-spaces;
+        /* text-overflow: ellipsis; */
+        overflow: hidden;
+        width: 80%;
+        font-size: 14px;
+        font-weight: bolder;
+    }
+    .date{
+        font-size: 14px;
+        text-align: justify;
+    }
+
+
+}
